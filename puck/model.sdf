@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<sdf version="1.4">
+  <model name="puck">
+    <static>false</static>
+    <link name="cylinder">
+      <pose>0 0 0.035 0 0 0 </pose>
+      <collision name="cylinder_collision">
+        <geometry>
+          <cylinder>
+            <radius>0.0375</radius>
+	    <length>0.03</length>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name="cylinder_visual">
+        <cast_shadows>false</cast_shadows>
+        <geometry>
+          <cylinder>
+            <radius>0.0375</radius>
+	    <length>0.03</length>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>  </model>
+</sdf>
