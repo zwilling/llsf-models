@@ -5,138 +5,131 @@
     <!-- facing in x direction -->
 
     <static>true</static>
-    <link name="ground_plate">
-      <pose>-0.015 0 0.002 0 0 0 </pose>
+    <link name="machine_link">
       <collision name="ground_plate_collision">
-        <geometry>
+        <pose>-0.015 0 0.002 0 0 0 </pose>
+	<geometry>
           <box>
             <size>0.03 0.16 0.004</size>
           </box>
         </geometry>
       </collision>
       <visual name="ground_plate_visual">
-        <cast_shadows>false</cast_shadows>
+        <pose>-0.015 0 0.002 0 0 0 </pose>
+	<cast_shadows>false</cast_shadows>
         <geometry>
 	  <box>
 	    <size>0.03 0.16 0.004</size>
           </box>
         </geometry>
       </visual>
-    </link>
-    <link name="low_plate">
-      <pose>0 0 0.03 0 0 0 </pose>
       <collision name="low_plate_collision">
-        <geometry>
+        <pose>0 0 0.03 0 0 0 </pose>
+	<geometry>
           <box>
             <size>0.004 0.16 0.06</size>
           </box>
         </geometry>
       </collision>
       <visual name="low_plate_visual">
-        <cast_shadows>false</cast_shadows>
+        <pose>0 0 0.03 0 0 0 </pose>
+	<cast_shadows>false</cast_shadows>
         <geometry>
 	  <box>
 	    <size>0.004 0.16 0.06</size>
           </box>
         </geometry>
       </visual>
-    </link>
-    <link name="middle_plate">
-      <pose>0.02 0 0.06 0 0 0 </pose>
       <collision name="middle_plate_collision">
-        <geometry>
+        <pose>0.02 0 0.06 0 0 0 </pose>
+	<geometry>
           <box>
             <size>0.04 0.16 0.004</size>
           </box>
         </geometry>
       </collision>
       <visual name="middle_plate_visual">
-        <cast_shadows>false</cast_shadows>
+        <pose>0.02 0 0.06 0 0 0 </pose>
+	<cast_shadows>false</cast_shadows>
         <geometry>
 	  <box>	    
             <size>0.04 0.16 0.004</size>
           </box>
         </geometry>
       </visual>
-    </link>
-    <link name="uppest_plate">
-      <pose>0.02 0 0.13 0 0 0 </pose>
       <collision name="uppest_plate_collision">
-        <geometry>
+        <pose>0.02 0 0.13 0 0 0 </pose>
+	<geometry>
           <box>
             <size>0.04 0.04 0.004</size>
           </box>
         </geometry>
       </collision>
       <visual name="uppest_plate_visual">
-        <cast_shadows>false</cast_shadows>
+        <pose>0.02 0 0.13 0 0 0 </pose>
+	<cast_shadows>false</cast_shadows>
         <geometry>
 	  <box>	    
             <size>0.04 0.04 0.004</size>
           </box>
         </geometry>
       </visual>
-    </link>
     <!-- only two sticks, I don't have triangles -->
-    <link name="upper_plate_left">
-      <pose>0.04 -0.05 0.095 0.86 0 0 </pose>
       <collision name="upper_plate_left_collision">
-        <geometry>
+        <pose>0.04 -0.05 0.095 0.86 0 0 </pose>
+	<geometry>
           <box>
             <size>0.004 0.092 0.004</size>
           </box>
         </geometry>
       </collision>
       <visual name="upper_plate_left_visual">
-        <cast_shadows>false</cast_shadows>
+        <pose>0.04 -0.05 0.095 0.86 0 0 </pose>
+	<cast_shadows>false</cast_shadows>
         <geometry>
 	  <box>
 	    <size>0.004 0.092 0.004</size>
           </box>
         </geometry>
       </visual>
-    </link>
-    <link name="upper_plate_right">
-      <pose>0.04 0.05 0.095 -0.86 0 0 </pose>
       <collision name="upper_plate_right_collision">
-        <geometry>
+        <pose>0.04 0.05 0.095 -0.86 0 0 </pose>
+	<geometry>
           <box>
             <size>0.004 0.092 0.004</size>
           </box>
         </geometry>
       </collision>
       <visual name="upper_plate_right_visual">
-        <cast_shadows>false</cast_shadows>
+        <pose>0.04 0.05 0.095 -0.86 0 0 </pose>
+	<cast_shadows>false</cast_shadows>
         <geometry>
 	  <box>
 	    <size>0.004 0.092 0.004</size>
           </box>
         </geometry>
       </visual>
-    </link>
     <!-- no cable -->
-    <link name="rfid">
-      <pose>0.06 0 0.095 0 0 0 </pose>
       <collision name="rfid_collision">
-        <geometry>
+        <pose>0.06 0 0.095 0 0 0 </pose>
+	<geometry>
           <box>
             <size>0.04 0.04 0.04</size>
           </box>
         </geometry>
       </collision>
       <visual name="rfid_visual">
-        <cast_shadows>false</cast_shadows>
+        <pose>0.06 0 0.095 0 0 0 </pose>
+	<cast_shadows>false</cast_shadows>
         <geometry>
 	  <box>	    
             <size>0.04 0.04 0.07</size>
           </box>
         </geometry>
       </visual>
-    </link>
-    <link name="trafficlight">
-      <pose>0.02 0 0.205 0 0 0 </pose>
       <collision name="trafficlight_collision">
-        <geometry>
+        <pose>0.02 0 0.205 0 0 0 </pose>
+	<geometry>
           <cylinder>
 	    <radius>0.02</radius>
 	    <length>0.15</length>
@@ -144,7 +137,8 @@
         </geometry>
       </collision>
       <visual name="trafficlight_visual">
-        <cast_shadows>false</cast_shadows>
+        <pose>0.02 0 0.205 0 0 0 </pose>
+	<cast_shadows>false</cast_shadows>
         <geometry>
           <cylinder>
 	    <radius>0.02</radius>
