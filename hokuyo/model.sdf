@@ -35,7 +35,6 @@
 	    <stddev>0.015</stddev>
 	  </noise>
         </ray>
-        <plugin name="laser" filename="libRayPlugin.so" />
         <always_on>1</always_on>
         <update_rate>5</update_rate>
         <visualize>true</visualize>
