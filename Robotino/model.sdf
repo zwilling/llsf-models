@@ -79,6 +79,6 @@
         </limit>
       </axis>
     </joint>
-    <plugin name="ModelControl" filename="libmodelControl.so">
+    <plugin name="ModelControl" filename="librobotino.so">
   </model>
 </sdf>
