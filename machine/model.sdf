@@ -22,6 +22,12 @@
 	    <size>0.03 0.16 0.004</size>
           </box>
         </geometry>
+	<material>
+	  <script>
+	    <uri>file://media/materials/scripts/gazebo.material</uri>
+	    <name>Gazebo/Grey</name>
+	  </script>
+	</material>
       </visual>
       <collision name="low_plate_collision">
         <pose>0 0 0.03 0 0 0 </pose>
@@ -39,6 +45,12 @@
 	    <size>0.004 0.16 0.06</size>
           </box>
         </geometry>
+	<material>
+	  <script>
+	    <uri>file://media/materials/scripts/gazebo.material</uri>
+	    <name>Gazebo/Grey</name>
+	  </script>
+	</material>
       </visual>
       <collision name="middle_plate_collision">
         <pose>0.02 0 0.06 0 0 0 </pose>
@@ -56,6 +68,12 @@
             <size>0.04 0.16 0.004</size>
           </box>
         </geometry>
+	<material>
+	  <script>
+	    <uri>file://media/materials/scripts/gazebo.material</uri>
+	    <name>Gazebo/Grey</name>
+	  </script>
+	</material>
       </visual>
       <collision name="uppest_plate_collision">
         <pose>0.02 0 0.13 0 0 0 </pose>
@@ -73,6 +91,12 @@
             <size>0.04 0.04 0.004</size>
           </box>
         </geometry>
+	<material>
+	  <script>
+	    <uri>file://media/materials/scripts/gazebo.material</uri>
+	    <name>Gazebo/Grey</name>
+	  </script>
+	</material>
       </visual>
     <!-- only two sticks, I don't have triangles -->
       <collision name="upper_plate_left_collision">
@@ -91,6 +115,12 @@
 	    <size>0.004 0.092 0.004</size>
           </box>
         </geometry>
+	<material>
+	  <script>
+	    <uri>file://media/materials/scripts/gazebo.material</uri>
+	    <name>Gazebo/Grey</name>
+	  </script>
+	</material>
       </visual>
       <collision name="upper_plate_right_collision">
         <pose>0.04 0.05 0.095 -0.86 0 0 </pose>
@@ -108,6 +138,12 @@
 	    <size>0.004 0.092 0.004</size>
           </box>
         </geometry>
+	<material>
+	  <script>
+	    <uri>file://media/materials/scripts/gazebo.material</uri>
+	    <name>Gazebo/Grey</name>
+	  </script>
+	</material>
       </visual>
     <!-- no cable -->
       <collision name="rfid_collision">
@@ -126,6 +162,12 @@
             <size>0.04 0.04 0.07</size>
           </box>
         </geometry>
+	<material>
+	  <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Black</name>
+	  </script>
+	</material>
       </visual>
       <collision name="trafficlight_collision">
         <pose>0.02 0 0.205 0 0 0 </pose>
@@ -136,15 +178,86 @@
           </cylinder>
         </geometry>
       </collision>
-      <visual name="trafficlight_visual">
-        <pose>0.02 0 0.205 0 0 0 </pose>
+      <visual name="upper_black_border">
+        <pose>0.02 0 0.275 0 0 0 </pose>
 	<cast_shadows>false</cast_shadows>
         <geometry>
           <cylinder>
 	    <radius>0.02</radius>
-	    <length>0.15</length>
+	    <length>0.01</length>
           </cylinder>
         </geometry>
+	<material>
+	  <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Black</name>
+	  </script>
+	</material>
+      </visual>
+      <visual name="red">
+        <pose>0.02 0 0.253 0 0 0 </pose>
+	<cast_shadows>false</cast_shadows>
+        <geometry>
+          <cylinder>
+	    <radius>0.019</radius>
+	    <length>0.034</length>
+          </cylinder>
+        </geometry>
+	<material>
+	  <ambient>0.8 0 0 0.8</ambient>
+	  <diffuse>0.8 0.0 0.0 0.8</diffuse>
+	  <emissive>0.0 0.0 0.0 0.0</emissive>
+	</material>
+	<transparency>0.9</transparency>
+      </visual>
+      <visual name="yellow">
+        <pose>0.02 0 0.219 0 0 0 </pose>
+	<cast_shadows>false</cast_shadows>
+        <geometry>
+          <cylinder>
+	    <radius>0.019</radius>
+	    <length>0.034</length>
+          </cylinder>
+        </geometry>
+	<material>
+	  <ambient>0.9 0.7 0 0.8</ambient>
+	  <diffuse>0.9 0.7 0.0 0.8</diffuse>
+	  <emissive>0.0 0.0 0.0 0.0</emissive>
+	</material>
+	<transparency>0.9</transparency>
+      </visual>
+      <visual name="green">
+        <pose>0.02 0 0.185 0 0 0 </pose>
+	<cast_shadows>false</cast_shadows>
+        <geometry>
+          <cylinder>
+	    <radius>0.019</radius>
+	    <length>0.034</length>
+          </cylinder>
+        </geometry>
+	<material>
+	  <ambient>0.0 0.8 0 0.8</ambient>
+	  <diffuse>0.0 0.8 0.0 0.8</diffuse>
+	  <emissive>0.0 0.0 0.0 0.0</emissive>
+	</material>
+	<transparency>0.9</transparency>
+	<transparency>0</transparency>
+      </visual>
+      <visual name="lower_black_border">
+        <pose>0.02 0 0.149 0 0 0 </pose>
+	<cast_shadows>false</cast_shadows>
+        <geometry>
+          <cylinder>
+	    <radius>0.02</radius>
+	    <length>0.038</length>
+          </cylinder>
+        </geometry>
+	<material>
+	  <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Black</name>
+	  </script>
+	</material>
       </visual>
     </link>
   </model>
