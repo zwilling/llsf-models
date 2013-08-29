@@ -3,6 +3,16 @@
   <model name="llsf_field">
     <static>true</static>
     <link name="field_link">
+      <visual name='visual'>
+	<pose>5.6 0 0 0 0 1.57</pose>
+	<geometry>
+	  <mesh>
+	    <uri>model://llsf_field/RobotinoFeld_leer.dae</uri>
+	    <scale>1.0 1.0 1.0</scale>
+	  </mesh>
+	</geometry>
+	<cast_shadows>false</cast_shadows>
+      </visual>
       <collision name="collision_ground">
 	<pose>2.8 2.8 0.01 0 0 0 </pose>
         <geometry>
@@ -19,15 +29,6 @@
           </friction>
         </surface>
       </collision>
-      <visual name="visual_ground">
-	<pose>2.8 2.8 0.01 0 0 0 </pose>
-        <cast_shadows>false</cast_shadows>
-        <geometry>
-	  <box>
-            <size>5.6 5.6 0.02</size>
-          </box>
-        </geometry>
-      </visual>
       <collision name="collision0">
         <pose>2.8 0 0.25 0 0 0 </pose>
 	<geometry>
@@ -44,15 +45,6 @@
           </friction>
         </surface>
       </collision>
-      <visual name="visual0">
-        <pose>2.8 0 0.25 0 0 0 </pose>
-	<cast_shadows>false</cast_shadows>
-        <geometry>
-	  <box>
-            <size>5.6 0.1 0.5</size>
-          </box>
-        </geometry>
-      </visual>
       <collision name="collision1">
         <pose>0 2.8 0.25 0 0 0 </pose>
 	<geometry>
@@ -69,15 +61,6 @@
           </friction>
         </surface>
       </collision>
-      <visual name="visual1">
-        <pose>0 2.8 0.25 0 0 0 </pose>
-	<cast_shadows>false</cast_shadows>
-        <geometry>
-	  <box>
-            <size>0.1 5.6 0.5</size>
-          </box>
-        </geometry>
-      </visual>
       <collision name="collision2">
         <pose>5.6 2.8 0.25 0 0 0 </pose>
 	<geometry>
@@ -94,15 +77,6 @@
           </friction>
         </surface>
       </collision>
-      <visual name="visual2">
-        <pose>5.6 2.8 0.25 0 0 0 </pose>
-	<cast_shadows>false</cast_shadows>
-        <geometry>
-	  <box>
-            <size>0.1 5.6 0.5</size>
-          </box>
-        </geometry>
-      </visual>
       <collision name="collision3">
         <pose>2.8 5.6 0.25 0 0 0 </pose>
 	<geometry>
@@ -119,15 +93,6 @@
           </friction>
         </surface>
       </collision>
-      <visual name="visual3">
-        <pose>2.8 5.6 0.25 0 0 0 </pose>
-	<cast_shadows>false</cast_shadows>
-        <geometry>
-	  <box>
-            <size>5.6 0.1 0.5</size>
-          </box>
-        </geometry>
-      </visual>
     </link>
 
 
