@@ -124,6 +124,7 @@
       </collision>
       <visual name="gripper_left_side_visual">
 	<pose>0.19 0.06 0.03 0 0 0</pose>
+        <cast_shadows>false</cast_shadows>
 	<geometry>
 	  <box>
 	    <size>0.12 0.03 0.03</size>
@@ -132,6 +133,7 @@
       </visual>
       <visual name="gripper_right_side_visual">
 	<pose>0.19 -0.06 0.03 0 0 0</pose>
+        <cast_shadows>false</cast_shadows>
 	<geometry>
 	  <box>
 	    <size>0.12 0.03 0.03</size>
@@ -140,6 +142,7 @@
       </visual>
       <visual name="gripper_right_front_visual">
 	<pose>0.25 -0.06 0.025 0 0 0.9</pose>
+        <cast_shadows>false</cast_shadows>
 	<geometry>
 	  <box>
 	    <size>0.03 0.03 0.03</size>
@@ -148,6 +151,7 @@
       </visual>
       <visual name="gripper_left_front_visual">
 	<pose>0.25 0.06 0.025 0 0 -0.9</pose>
+        <cast_shadows>false</cast_shadows>
 	<geometry>
 	  <box>
 	    <size>0.03 0.03 0.03</size>
@@ -156,6 +160,7 @@
       </visual>
       <visual name="gripper_right_back_visual">
 	<pose>0.17 -0.05 0.025 0 0 0.785</pose>
+        <cast_shadows>false</cast_shadows>
 	<geometry>
 	  <box>
 	    <size>0.03 0.03 0.03</size>
@@ -164,12 +169,93 @@
       </visual>
       <visual name="gripper_left_back_visual">
 	<pose>0.17 0.05 0.025 0 0 0.785</pose>
+        <cast_shadows>false</cast_shadows>
 	<geometry>
 	  <box>
 	    <size>0.03 0.03 0.03</size>
 	  </box>
 	</geometry>
       </visual>
+
+      <visual name="gripper_laser_right_visual">
+	<pose>0.242 -0.075 0.025 0 1.57 0</pose>
+	<geometry>
+	  <cylinder>
+	    <length>0.05</length>
+	    <radius>0.002</radius>
+	  </cylinder>
+	</geometry>
+	<material>
+	  <ambient>0 0 0 0</ambient>
+	  <diffuse>0 0 0 0</diffuse>
+	</material>
+      </visual>
+      <visual name="gripper_laser_left_visual">
+	<pose>0.242 0.075 0.025 0 1.57 0</pose>
+	<geometry>
+	  <cylinder>
+	    <length>0.05</length>
+	    <radius>0.002</radius>
+	  </cylinder>
+	</geometry>
+	<material>
+	  <ambient>0 0 0 0</ambient>
+	  <diffuse>0 0 0 0</diffuse>
+	</material>
+      </visual>
+
+      <sensor name="gripper_laser_right" type="ray">
+        <pose>0.267 -0.075 0.025 0 0 0</pose>
+        <ray>
+          <scan>
+            <horizontal>
+              <samples>1</samples>
+              <resolution>1</resolution>
+              <min_angle>-0.02</min_angle>
+              <max_angle>0.02</max_angle>
+            </horizontal>
+          </scan>
+          <range>
+            <min>0.0</min>
+            <max>0.2</max>
+            <resolution>0.002</resolution>
+          </range>
+	  <noise>
+	    <type>gaussian</type>
+	    <mean>0</mean>
+	    <stddev>0.001</stddev>
+	  </noise>
+        </ray>
+        <always_on>1</always_on>
+        <update_rate>5</update_rate>
+        <visualize>true</visualize>
+      </sensor>
+      <sensor name="gripper_laser_left" type="ray">
+        <pose>0.267 0.075 0.025 0 0 0</pose>
+        <ray>
+          <scan>
+            <horizontal>
+              <samples>1</samples>
+              <resolution>1</resolution>
+              <min_angle>-0.02</min_angle>
+              <max_angle>0.02</max_angle>
+            </horizontal>
+          </scan>
+          <range>
+            <min>0.0</min>
+            <max>0.2</max>
+            <resolution>0.002</resolution>
+          </range>
+	  <noise>
+	    <type>gaussian</type>
+	    <mean>0</mean>
+	    <stddev>0.001</stddev>
+	  </noise>
+        </ray>
+        <always_on>1</always_on>
+        <update_rate>5</update_rate>
+        <visualize>true</visualize>
+      </sensor>
     </link>
   
     <include>
