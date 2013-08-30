@@ -20,7 +20,7 @@
       </visual>
       <collision name='body-collision'>
         <pose>0 0 0.025 0 0 0</pose>
-        <geometry>pics/Schedule.png
+        <geometry>
           <cylinder>
 	    <length>0.05</length>
 	    <radius>0.18</radius>
@@ -69,6 +69,10 @@
       <uri>model://hokuyo</uri>
       <pose>0.085 0 0.15 0 0 0</pose>
     </include>
+    <include>
+      <uri>model://infrared_sensor</uri>
+      <pose>0.165 0 0.07 0 0.52 0</pose>
+    </include>
     <joint name="hokuyo_joint" type="revolute">
       <child>hokuyo::link</child>
       <parent>body</parent>
@@ -80,6 +84,17 @@
         </limit>
       </axis>
     </joint>
-    <plugin name="ModelControl" filename="librobotino.so">
+    <joint name="infrared_puck_sensor_joint" type="revolute">
+      <child>infrared_sensor::link</child>
+      <parent>body</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <upper>0</upper>
+          <lower>0</lower>
+        </limit>
+      </axis>
+    </joint>
+    <plugin name="ModelControl" filename="librobotino.so"/>
   </model>
 </sdf>
