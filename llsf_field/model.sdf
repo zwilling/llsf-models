@@ -174,7 +174,7 @@
       <pose>0.2 5.4 0.02 0 0 -0.785</pose>
     </include>
     <include>
-      <name>T</name>
+      <name>TST</name>
       <uri>model://machine</uri>
       <pose>5.4 5.4 0.02 0 0 -2.356</pose>
     </include>
