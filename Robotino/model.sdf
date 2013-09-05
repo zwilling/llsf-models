@@ -9,7 +9,7 @@
         <inertia><ixx>1.0</ixx><ixy>0.0</ixy><ixz>0.0</ixz><iyy>1.0</iyy><iyz>0.0</iyz><izz>1.0</izz></inertia>
       </inertial>
       <visual name='body-visual'>
-	<pose>0.01 0 0.01 0 0 1.570795</pose>
+	<pose>0.01 0 0.00 0 0 1.570795</pose>
 	<geometry>
 	  <mesh>
 	    <uri>model://Robotino/meshes/RobotinoBody.dae</uri>
@@ -23,7 +23,7 @@
         <geometry>
           <cylinder>
 	    <length>0.05</length>
-	    <radius>0.18</radius>
+	    <radius>0.175</radius>
 	  </cylinder>
         </geometry>
 	<surface>
@@ -42,7 +42,7 @@
         <geometry>
           <cylinder>
 	    <length>0.05</length>
-	    <radius>0.18</radius>
+	    <radius>0.175</radius>
 	  </cylinder>
         </geometry>
       </visual>
@@ -217,7 +217,7 @@
           </scan>
           <range>
             <min>0.0</min>
-            <max>0.2</max>
+            <max>1.0</max>
             <resolution>0.002</resolution>
           </range>
 	  <noise>
@@ -243,7 +243,7 @@
           </scan>
           <range>
             <min>0.0</min>
-            <max>0.2</max>
+            <max>1.0</max>
             <resolution>0.002</resolution>
           </range>
 	  <noise>
@@ -264,7 +264,7 @@
     </include>
     <include>
       <uri>model://infrared_sensor</uri>
-      <pose>0.165 0 0.07 0 0.52 0</pose>
+      <pose>0.17 0 0.055 0 0.75 0</pose>
     </include>
 
     <joint name="hokuyo_joint" type="revolute">
@@ -282,7 +282,7 @@
     <joint name="infrared_puck_sensor_joint" type="revolute">
       <child>infrared_sensor::link</child>
       <parent>body</parent>
-      <pose>0.165 0 0.03 0 0 0</pose>
+      <pose>0.17 0 0.02 0 0 0</pose>
       <axis>
         <xyz>0 0 1</xyz>
         <limit>

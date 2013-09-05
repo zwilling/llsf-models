@@ -27,14 +27,14 @@
             </horizontal>
           </scan>
           <range>
-            <min>0.03</min>
+            <min>0.01</min>
             <max>0.5</max>
-            <resolution>0.002</resolution>
+            <resolution>0.001</resolution>
           </range>
 	  <noise>
 	    <type>gaussian</type>
 	    <mean>0</mean>
-	    <stddev>0.001</stddev>
+	    <stddev>0.0001</stddev>
 	  </noise>
         </ray>
         <always_on>1</always_on>
