@@ -37,15 +37,6 @@
 	  </friction>
 	</surface>
       </collision>
-      <visual name='body-collision-visual'>
-        <pose>0 0 0.025 0 0 0</pose>
-        <geometry>
-          <cylinder>
-	    <length>0.05</length>
-	    <radius>0.175</radius>
-	  </cylinder>
-        </geometry>
-      </visual>
       <visual name='wheel0-visual'>
         <pose>-0.12 0 0.045 0 0 0</pose>
         <geometry>
