@@ -33,7 +33,7 @@
 	  <noise>
 	    <type>gaussian</type>
 	    <mean>0</mean>
-	    <stddev>0.015</stddev>
+	    <stddev>0.005</stddev>
 	  </noise>
         </ray>
         <always_on>1</always_on>

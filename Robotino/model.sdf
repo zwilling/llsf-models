@@ -1,11 +1,13 @@
 <?xml version='1.0'?>
 <sdf version='1.4'>
-  <model name="my_robot">
+  <model name="robotino">
     <static>false</static>
     <link name="body">
+      <pose>0 0 0.001 0 0 0 </pose>
+      <gravity>true</gravity>
       <inertial>
-        <mass>20</mass>
-        <pose>0 0 0 0 0 0</pose>
+        <mass>5000</mass>
+        <pose>0 0 0.015 0 0 0</pose>
         <inertia><ixx>1.0</ixx><ixy>0.0</ixy><ixz>0.0</ixz><iyy>1.0</iyy><iyz>0.0</iyz><izz>1.0</izz></inertia>
       </inertial>
       <visual name='body-visual'>
@@ -29,16 +31,25 @@
 	<surface>
 	  <friction>
 	    <ode>
-	      <mu>0</mu>
-              <mu2>0</mu2>
-              <slip1>1.0</slip1>
-              <slip2>1.0</slip2>
+	      <mu>0.2</mu>
+              <mu2>0.2</mu2>
+              <slip1>0.8</slip1>
+              <slip2>0.8</slip2>
 	    </ode>
 	  </friction>
 	</surface>
       </collision>
+      <visual name='body-collision-visual'>
+        <pose>0 0 0.025 0 0 0</pose>
+        <geometry>
+          <cylinder>
+	    <length>0.05</length>
+	    <radius>0.175</radius>
+	  </cylinder>
+        </geometry>
+      </visual>
       <visual name='wheel0-visual'>
-        <pose>-0.12 0 0.045 0 0 0</pose>
+        <pose>-0.12 0 0.04 0 0 0</pose>
         <geometry>
           <mesh>
             <uri>model://Robotino/meshes/RobotinoWheel.dae</uri>
@@ -66,7 +77,7 @@
       </visual>
 
       <collision name="gripper_left_side_collision">
-	<pose>0.19 0.067 0.03 0 0 -0.08</pose>
+	<pose>0.1885 0.057 0.025 0 0 -0.00</pose>
 	<geometry>
 	  <box>
 	    <size>0.12 0.03 0.03</size>
@@ -74,7 +85,7 @@
 	</geometry>
       </collision>
       <collision name="gripper_right_side_collision">
-	<pose>0.19 -0.067 0.03 0 0 0.08</pose>
+	<pose>0.1885 -0.057 0.025 0 0 0.00</pose>
 	<geometry>
 	  <box>
 	    <size>0.12 0.03 0.03</size>
@@ -82,7 +93,7 @@
 	</geometry>
       </collision>
       <collision name="gripper_right_front_collision">
-	<pose>0.25 -0.06 0.025 0 0 0.9</pose>
+	<pose>0.25 -0.059 0.025 0 0 0.9</pose>
 	<geometry>
 	  <box>
 	    <size>0.03 0.03 0.03</size>
@@ -100,7 +111,7 @@
 	</surface>
       </collision>
       <collision name="gripper_left_front_collision">
-	<pose>0.25 0.06 0.025 0 0 -0.9</pose>
+	<pose>0.25 0.059 0.025 0 0 -0.9</pose>
 	<geometry>
 	  <box>
 	    <size>0.03 0.03 0.03</size>
@@ -118,7 +129,7 @@
 	</surface>
       </collision>
       <collision name="gripper_right_front_inside_collision">
-	<pose>0.249 -0.06 0.025 0 0 0.9</pose>
+	<pose>0.245 -0.059 0.025 0 0 0.9</pose>
 	<geometry>
 	  <box>
 	    <size>0.03 0.03 0.03</size>
@@ -136,7 +147,7 @@
 	</surface>
       </collision>
       <collision name="gripper_left_front_inside_collision">
-	<pose>0.249 0.06 0.025 0 0 -0.9</pose>
+	<pose>0.245 0.059 0.025 0 0 -0.9</pose>
 	<geometry>
 	  <box>
 	    <size>0.03 0.03 0.03</size>
@@ -154,23 +165,23 @@
 	</surface>
       </collision>
       <collision name="gripper_right_back_collision">
-	<pose>0.17 -0.05 0.025 0 0 0.785</pose>
+	<pose>0.19 -0.042 0.025 0 0 1.0</pose>
 	<geometry>
 	  <box>
-	    <size>0.03 0.03 0.03</size>
+	    <size>0.03 0.075 0.03</size>
 	  </box>
 	</geometry>
       </collision>
       <collision name="gripper_left_back_collision">
-	<pose>0.17 0.05 0.025 0 0 0.785</pose>
+	<pose>0.19 0.042 0.025 0 0 -1.0</pose>
 	<geometry>
 	  <box>
-	    <size>0.03 0.03 0.03</size>
+	    <size>0.03 0.075 0.03</size>
 	  </box>
 	</geometry>
       </collision>
       <visual name="gripper_left_side_visual">
-	<pose>0.19 0.067 0.03 0 0 -0.08</pose>
+	<pose>0.1885 0.057 0.025 0 0 -0.00</pose>
         <cast_shadows>false</cast_shadows>
 	<geometry>
 	  <box>
@@ -179,7 +190,7 @@
 	</geometry>
       </visual>
       <visual name="gripper_right_side_visual">
-	<pose>0.19 -0.067 0.03 0 0 0.08</pose>
+	<pose>0.1885 -0.057 0.025 0 0 0.00</pose>
         <cast_shadows>false</cast_shadows>
 	<geometry>
 	  <box>
@@ -188,7 +199,7 @@
 	</geometry>
       </visual>
       <visual name="gripper_right_front_visual">
-	<pose>0.25 -0.06 0.025 0 0 0.9</pose>
+	<pose>0.25 -0.059 0.025 0 0 0.9</pose>
         <cast_shadows>false</cast_shadows>
 	<geometry>
 	  <box>
@@ -197,7 +208,7 @@
 	</geometry>
       </visual>
       <visual name="gripper_left_front_visual">
-	<pose>0.25 0.06 0.025 0 0 -0.9</pose>
+	<pose>0.25 0.059 0.025 0 0 -0.9</pose>
         <cast_shadows>false</cast_shadows>
 	<geometry>
 	  <box>
@@ -206,20 +217,20 @@
 	</geometry>
       </visual>
       <visual name="gripper_right_back_visual">
-	<pose>0.17 -0.05 0.025 0 0 0.785</pose>
+	<pose>0.19 -0.042 0.025 0 0 1.0</pose>
         <cast_shadows>false</cast_shadows>
 	<geometry>
 	  <box>
-	    <size>0.03 0.03 0.03</size>
+	    <size>0.03 0.075 0.03</size>
 	  </box>
 	</geometry>
       </visual>
       <visual name="gripper_left_back_visual">
-	<pose>0.17 0.05 0.025 0 0 0.785</pose>
+	<pose>0.19 0.042 0.025 0 0 -1.0</pose>
         <cast_shadows>false</cast_shadows>
 	<geometry>
 	  <box>
-	    <size>0.03 0.03 0.03</size>
+	    <size>0.03 0.075 0.03</size>
 	  </box>
 	</geometry>
       </visual>

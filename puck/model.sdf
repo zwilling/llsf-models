@@ -6,7 +6,7 @@
       <pose>0 0 0.015 0 0 0 </pose>
       <gravity>true</gravity>
       <inertial>
-        <mass>0.1</mass>
+        <mass>100</mass>
       </inertial>
       <collision name="cylinder_collision">
         <geometry>
@@ -18,10 +18,10 @@
 	<surface>
 	  <friction>
 	    <ode>
-	      <mu>1.0</mu>
-              <mu2>1.0</mu2>
-              <slip1>0.0</slip1>
-              <slip2>0.0</slip2>
+	      <mu>0.6</mu>
+              <mu2>0.6</mu2>
+              <slip1>0.4</slip1>
+              <slip2>0.4</slip2>
 	    </ode>
 	  </friction>
 	</surface>
@@ -37,7 +37,7 @@
         <cast_shadows>false</cast_shadows>
         <geometry>
           <cylinder>
-            <radius>0.0375</radius>
+            <radius>0.035</radius>
 	    <length>0.03</length>
           </cylinder>
         </geometry>

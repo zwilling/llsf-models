@@ -131,7 +131,7 @@
     <include>
       <name>M7</name>
       <uri>model://machine</uri>
-      <pose>2.8 5.04 0.02 0 0 1.57</pose>
+      <pose>2.8 5.04 0.02 0 0 0</pose>
     </include>
     <include>
       <name>M8</name>
