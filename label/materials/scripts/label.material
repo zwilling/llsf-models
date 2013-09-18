@@ -7,11 +7,10 @@ material label/robotino1
     {
       texture_unit
       {
-        texture label1.jpg
+        texture label1.png
         filtering anistropic
         max_anisotropy 16
       }
-      
     }
   }
 }
@@ -25,11 +24,10 @@ material label/robotino2
     {
       texture_unit
       {
-        texture label2.jpg
+        texture label2.png
         filtering anistropic
         max_anisotropy 16
       }
-      
     }
   }
 }
@@ -43,11 +41,44 @@ material label/robotino3
     {
       texture_unit
       {
-        texture label3.jpg
+        texture label3.png
         filtering anistropic
         max_anisotropy 16
       }
-      
+    }
+  }
+}
+
+material label/arrowup
+{
+  receive_shadows off
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture arrowup.png
+        filtering anistropic
+        max_anisotropy 16
+      }
+    }
+  }
+}
+
+material label/arrowredup
+{
+  receive_shadows off
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+        texture arrowredup.png
+        filtering anistropic
+        max_anisotropy 16
+      }
     }
   }
 }
