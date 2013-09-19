@@ -308,7 +308,7 @@
         <visualize>true</visualize>
       </sensor>
     </link>
-  
+
     <include>
       <uri>model://hokuyo</uri>
       <pose>0.085 0 0.15 0 0 0</pose>
@@ -316,6 +316,10 @@
     <include>
       <uri>model://infrared_sensor</uri>
       <pose>0.175 0 0.055 0 0.75 0</pose>
+    </include>
+    <include>
+      <uri>model://webcam</uri>
+      <pose>0.04 0 0.25 0 0 0</pose>
     </include>
 
     <joint name="hokuyo_joint" type="revolute">
