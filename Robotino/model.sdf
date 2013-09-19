@@ -39,6 +39,15 @@
 	  </friction>
 	</surface>
       </collision>
+      <collision name='chasis-collision-for-laser'>
+        <pose>-0.05 0 0.17 0 0 0</pose>
+        <geometry>
+          <cylinder>
+	    <length>0.08</length>
+	    <radius>0.12</radius>
+	  </cylinder>
+        </geometry>
+      </collision>
       <visual name='wheel0-visual'>
         <pose>-0.12 0 0.04 0 0 0</pose>
         <geometry>
