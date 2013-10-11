@@ -20,8 +20,8 @@
         <ray>
           <scan>
             <horizontal>
-              <samples>1</samples>
-              <resolution>1</resolution>
+              <samples>3</samples>
+              <resolution>0.02</resolution>
               <min_angle>-0.02</min_angle>
               <max_angle>0.02</max_angle>
             </horizontal>
@@ -39,7 +39,7 @@
         </ray>
         <always_on>1</always_on>
         <update_rate>5</update_rate>
-        <visualize>true</visualize>
+        <visualize>false</visualize>
       </sensor>
     </link>
   </model>
