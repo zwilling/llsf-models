@@ -27,6 +27,12 @@
         <update_rate>2.0</update_rate>
         <visualize>false</visualize>
 	<camera name="front_webcam">
+	  <horizontal_fov>1.08</horizontal_fov>
+	  <image>
+	    <width>320</width>
+	    <height>240</height>
+	    <format>R8G8B8</format>
+	  </image>
 	</camera>
       </sensor>
     </link>

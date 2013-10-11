@@ -295,8 +295,8 @@
         <ray>
           <scan>
             <horizontal>
-              <samples>1</samples>
-              <resolution>1</resolution>
+              <samples>3</samples>
+              <resolution>0.02</resolution>
               <min_angle>-0.02</min_angle>
               <max_angle>0.02</max_angle>
             </horizontal>
@@ -314,13 +314,13 @@
         </ray>
         <always_on>1</always_on>
         <update_rate>5</update_rate>
-        <visualize>true</visualize>
+        <visualize>false</visualize>
       </sensor>
     </link>
 
     <include>
       <uri>model://hokuyo</uri>
-      <pose>0.085 0 0.15 0 0 0</pose>
+      <pose>0.13 0 0.15 0 0 0</pose> <!-- 0.085 0 0.15 0 0 0 -->
     </include>
     <include>
       <uri>model://infrared_sensor</uri>
@@ -328,7 +328,7 @@
     </include>
     <include>
       <uri>model://webcam</uri>
-      <pose>0.04 0 0.25 0 0 0</pose>
+      <pose>0.045 0 0.22 0 0 0</pose>
     </include>
 
     <joint name="hokuyo_joint" type="revolute">
