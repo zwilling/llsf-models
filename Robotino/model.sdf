@@ -328,7 +328,7 @@
     </include>
     <include>
       <uri>model://webcam</uri>
-      <pose>0.045 0 0.22 0 0 0</pose>
+      <pose>0.12 0 0.25 0 0.75 0</pose>
     </include>
 
     <joint name="hokuyo_joint" type="revolute">
@@ -358,7 +358,7 @@
     <joint name="webcam_sensor_joint" type="revolute">
       <child>webcam::link</child>
       <parent>body</parent>
-      <pose>0.04 0 0.02 0 0 0</pose>
+      <pose>0.12 0 0.02 0 0 0</pose>
       <axis>
         <xyz>0 0 1</xyz>
         <limit>
